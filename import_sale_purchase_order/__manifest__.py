@@ -21,7 +21,7 @@
 ##############################################################################
 
 {
-    'name': 'Importar Orden de Compra y Venta desde CSV',
+    'name': 'Import Sale and Purchase Order CSV',
     'version': '10.0.1.0.0',
     'author': 'Falcon Solutions SpA',
     'maintainer': 'Falcon Solutions',
