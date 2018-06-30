@@ -22,13 +22,13 @@
 
 {
     'name': 'Import Sale and Purchase Order CSV',
-    'version': '10.0.1.0.0',
+    'version': '11.0.1.0.0',
     'author': 'Falcon Solutions SpA',
     'maintainer': 'Falcon Solutions',
     'website': 'http://www.falconsolutions.cl',
     'license': 'AGPL-3',
     'category': 'Sales',
-    'summary': 'Importar Orden de Compra y Venta desde CSV',
+    'summary': 'Import Purchase and Sales Order from CSV',
     'depends': ['base',
                 'sale',
                 'purchase'

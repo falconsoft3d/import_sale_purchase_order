@@ -32,6 +32,6 @@
         </record>
     
         <menuitem action="action_wizard_import_sale_order" id="sale_order_menu_import" 
-            parent="sales_team.menu_sales" sequence="300" name="Importar Cotización"/>
+            parent="sale.menu_sale_config" sequence="300" name="Importar Cotización"/>
 
     </odoo>

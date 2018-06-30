@@ -4,6 +4,7 @@ import logging
 import os
 import csv
 import tempfile
+import base64
 from odoo.exceptions import UserError
 from odoo import api, fields, models, _, SUPERUSER_ID
 from datetime import datetime, timedelta, date
@@ -24,7 +25,8 @@ class ImportSaleOrder(models.TransientModel):
         file_path = tempfile.gettempdir()+'/file.csv'
         data = self.file_data
         f = open(file_path,'wb')
-        f.write(data.decode('base64'))
+        f.write(base64.b64decode(data))
+        #f.write(data.decode('base64'))
         f.close() 
         archive = csv.DictReader(open(file_path))
         
@@ -108,7 +110,7 @@ class ImportSaleOrder(models.TransientModel):
     @api.model
     def valid_columns_keys(self, archive_lines):
         columns = archive_lines[0].keys()
-        print "columns>>",columns
+        #print "columns>>",columns
         text = "El Archivo csv debe contener las siguientes columnas: code, quantity y price. \nNo se encuentran las siguientes columnas en el Archivo:"; text2 = text
         if not 'code' in columns:
             text +="\n[ code ]"
